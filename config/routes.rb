@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
+  get("/square/new", { :controller => "application", :action => "new_square_form" })
+  get("/sqaure/results", { :controller => "application", :action => "calculate_square" })
 
-  get("/square/new", {:controller => "application", :action => "new_square_form"})
-  get("/sqaure/results", {:controller => "application", :action => "calculate_square"})
+  get("/square_root/new", { :controller => "application", :action => "new_square_root_form" })
+  get("/square_root/results", { :controller => "application", :action => "calculate_square_root" })
 
-  get("/square_root/new", {:controller => "application", :action => "new_square_root_form"})
-  get("/square_root/results", {:controller => "application", :action => "calculate_square_root"})
+  get("/payment/new", { :controller => "number", :action => "new_payment_form" })
+  get("/payment/results", { :controller => "application", :action => "calculate_payment" })
 
-  get("/payment/new", {:controller => "number", :action => "new_payment_form"})
-  get("/payment/results", {:controller => "application", :action => "calculate_payment"})
-
-  get("/random/new", {:controller => "application", :action => "new_random_form"})
-  get("/random/results", {:controller => "application", :action => "calculate_random"})
-  
+  get("/random/new", { :controller => "application", :action => "new_random_form" })
+  get("/random/results", { :controller => "application", :action => "calculate_random" })
 end
